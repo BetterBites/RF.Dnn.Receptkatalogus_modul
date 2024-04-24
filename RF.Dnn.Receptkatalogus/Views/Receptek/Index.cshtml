@@ -1,0 +1,31 @@
+﻿@inherits DotNetNuke.Web.Mvc.Framework.DnnWebViewPage<IEnumerable<BetterBites.DnnRF.Dnn.Receptkatalogus.Models.Receptek>>
+
+@using System.Text.RegularExpressions
+@using DotNetNuke.Web.Mvc.Helpers
+
+
+<div id="Items-@Dnn.ModuleContext.ModuleId">
+        @if (Model == null)
+        {
+            <p>@Dnn.LocalizeString("NoItems")</p>
+        }
+        else
+        {
+            <ul class="tm_tl">
+                @foreach (var item in Model)
+                {
+                    <li class="tm_t">
+                        <h3>@item.nev</h3>
+
+                    </li>
+                }
+            </ul>
+        }
+    </div>
+@*<h1>RECEPT tesztecske</h1>
+<div>
+    @foreach (var recept in Model)
+    {
+        <h2>@recept.nev</h2>
+    }
+</div>*@
