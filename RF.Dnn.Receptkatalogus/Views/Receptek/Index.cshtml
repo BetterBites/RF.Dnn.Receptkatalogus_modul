@@ -4,7 +4,7 @@
 @using DotNetNuke.Web.Mvc.Helpers
 
 
-<div id="Items-@Dnn.ModuleContext.ModuleId">
+@*<div id="Items-@Dnn.ModuleContext.ModuleId">
         @if (Model == null)
         {
             <p>@Dnn.LocalizeString("NoItems")</p>
@@ -21,11 +21,32 @@
                 }
             </ul>
         }
-    </div>
-@*<h1>RECEPT tesztecske</h1>
-<div>
+    </div>*@
+@*<div>
     @foreach (var recept in Model)
     {
         <h2>@recept.nev</h2>
     }
 </div>*@
+
+
+<h1>Találd meg kedvenc mentes receptjeidet!</h1>
+<h2>Válassz kategóriát!</h2>
+<table>
+    <tr>
+        <td><img src="~/Kepek/reggeli.jpg"></td>
+        <td>Row 1, Column 2</td>
+        <td>
+            @*@foreach (var file in ViewBag.images)
+            {
+                <img src="~/Kepek/@Path.GetFileName(file)">
+            }*@
+
+            </td>
+    </tr>
+    <tr>
+        <td>Reggeli</td>
+        <td>Ebéd</td>
+        <td>Vacsora</td>
+    </tr>
+</table> 

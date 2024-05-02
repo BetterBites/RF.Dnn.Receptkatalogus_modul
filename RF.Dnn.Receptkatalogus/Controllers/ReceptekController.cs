@@ -38,6 +38,5 @@ namespace BetterBites.DnnRF.Dnn.Receptkatalogus.Controllers
             return View(items);
 
         }
-
     }
 }
