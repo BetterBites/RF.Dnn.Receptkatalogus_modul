@@ -37,10 +37,7 @@
         <td><img src="~/Kepek/reggeli.jpg"></td>
         <td>Row 1, Column 2</td>
         <td>
-            @*@foreach (var file in ViewBag.images)
-            {
-                <img src="~/Kepek/@Path.GetFileName(file)">
-            }*@
+                <img src="@Url.Content("~/Kepek/ebed.jpg")">
 
             </td>
     </tr>
