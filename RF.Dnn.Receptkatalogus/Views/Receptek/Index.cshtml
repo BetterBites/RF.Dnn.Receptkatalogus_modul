@@ -29,33 +29,58 @@
     }
 </div>*@
 
-<div class="modulcimek">
-    <h1 class="modulcim">Találd meg kedvenc mentes receptjeidet!</h1>
-    <h3 class="modulalcim">Válassz kategóriát!</h3>
+<div id="kategorialista">
+    <div class="modulcimek">
+        <h1 class="modulcim">Találd meg kedvenc mentes receptjeidet!</h1>
+        <h3 class="modulalcim">Válassz kategóriát!</h3>
+    </div>
+    <div id="kategoriacontainer" class="kategoriacontainer">
+        <div id="rdiv" class="kategoria">
+            <div class="kategoriakep">
+                <img class="katkep" src="~/Portals/0/Images/reggeli.png">
+            </div>
+            <div class="kategorianev">
+                <h3>Reggeli</h3>
+
+            </div>
+        </div>
+        <div id="bdiv" class="kategoria">
+            <div class="kategoriakep">
+                <img class="katkep" src="~/Portals/0/Images/ebed.png">
+            </div>
+            <div class="kategorianev">
+                <h3>Ebéd</h3>
+            </div>
+        </div>
+        <div id="vdiv" class="kategoria">
+            <div class="kategoriakep">
+                <img class="katkep" src="~/Portals/0/Images/vacsora.png">
+            </div>
+            <div class="kategorianev">
+                <h3>Vacsora</h3>
+            </div>
+        </div>
+    </div>
 </div>
-<div class="kategoriacontainer">
-    <div class="kategoria">
-        <div class="kategoriakep">
-            <img class="katkep" src="~/Portals/0/Images/reggeli.png">
-        </div>
-        <div class="kategorianev">
-            <h3>Reggeli</h3>
-        </div>
-    </div>
-    <div class="kategoria">
-        <div class="kategoriakep">
-            <img class="katkep" src="~/Portals/0/Images/ebed.png">
-        </div>
-        <div class="kategorianev">
-            <h3>Ebéd</h3>
-        </div>
-    </div>
-    <div class="kategoria">
-        <div class="kategoriakep">
-            <img class="katkep" src="~/Portals/0/Images/vacsora.png">
-        </div>
-        <div class="kategorianev">
-            <h3>Vacsora</h3>
-        </div>
-    </div>
-</div>
+
+<script type="text/javascript">
+    var rdiv = document.getElementById('rdiv');
+    var bdiv = document.getElementById('bdiv');
+    var vdiv = document.getElementById('vdiv');
+
+
+    var katlista = function () {
+        var div = document.getElementById('kategorialista');
+        if (div.style.display !== 'none') {
+            div.style.display = 'none';
+        }
+        else {
+            div.style.display = 'block';
+        }
+    };
+
+    rdiv.onclick = katlista;
+    bdiv.onclick = katlista;
+    vdiv.onclick = katlista;
+
+</script>
