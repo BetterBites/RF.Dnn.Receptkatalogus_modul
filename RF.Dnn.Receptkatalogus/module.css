@@ -40,3 +40,8 @@ h3.modulalcim {
 .kategorianev {
     margin-top: 20px;
 }
+.kategorianev a {
+    margin-right: auto;
+    margin-left: auto;
+}
+
