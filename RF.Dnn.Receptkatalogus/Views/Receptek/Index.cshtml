@@ -74,10 +74,32 @@
     </div>
 </div>
 <div id="receptlista">
-    <div>
+    <div id="reggelik">
         @foreach (var recept in Model)
         {
-            if (!(recept.nev == "nincs"))
+            if (recept.reggeli)
+            {
+                <div class="receptsorolas">
+                    <h2>@recept.nev</h2>
+                    <img />
+                </div>
+                
+            }
+        }
+    </div>
+    <div id="ebedek">
+        @foreach (var recept in Model)
+        {
+            if (recept.ebed)
+            {
+                <h2>@recept.nev</h2>
+            }
+        }
+    </div>
+    <div id="vacsorak">
+        @foreach (var recept in Model)
+        {
+            if (recept.vacsora)
             {
                 <h2>@recept.nev</h2>
             }
@@ -90,13 +112,15 @@
     var bdiv = document.getElementById('bdiv');
     var vdiv = document.getElementById('vdiv');
 
-    var rlista = document.getElementById('receptlista');
-    if (rlista.style.display !== 'none') {
-        rlista.style.display = 'none';
-    }
+    var reggelik = document.getElementById('reggelik');
+    reggelik.style.display = 'none';
+    var ebedek = document.getElementById('ebedek');
+    ebedek.style.display = 'none';
+    var vacsorak = document.getElementById('vacsorak');
+    vacsorak.style.display = 'none';
 
 
-    var katlista = function () {
+    function katlista (etkezes) {
         var div = document.getElementById('kategorialista');
         if (div.style.display !== 'none') {
             div.style.display = 'none';
@@ -104,13 +128,21 @@
         else {
             div.style.display = 'block';
         }
-        if (rlista.style.display == 'none') {
-            rlista.style.display = 'block';
+        var etkezesdiv = document.getElementById(etkezes);
+        if (etkezesdiv.style.display == 'none') {
+            etkezesdiv.style.display = 'block';
         }
     };
 
-    rdiv.onclick = katlista;
-    bdiv.onclick = katlista;
-    vdiv.onclick = katlista;
+    rdiv.onclick = function () {
+        katlista('reggelik');
+    }
+    bdiv.onclick = function () {
+        katlista('ebedek');
+    }
+    vdiv.onclick = function () {
+        katlista('vacsorak');
+    }
+
 
 </script>
