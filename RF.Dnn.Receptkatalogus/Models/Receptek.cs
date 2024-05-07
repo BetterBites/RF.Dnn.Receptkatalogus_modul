@@ -39,5 +39,7 @@ namespace BetterBites.DnnRF.Dnn.Receptkatalogus.Models
 
         public bool laktozmentes { get; set; }
 
+        public string kepnev { get; set; }
+
     }
 }
