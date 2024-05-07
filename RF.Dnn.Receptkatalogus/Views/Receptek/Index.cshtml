@@ -74,7 +74,15 @@
     </div>
 </div>
 <div id="receptlista">
-    <h2>haho</h2>
+    <div>
+        @foreach (var recept in Model)
+        {
+            if (!(recept.nev == "nincs"))
+            {
+                <h2>@recept.nev</h2>
+            }
+        }
+    </div>
 </div>
 
 <script type="text/javascript">

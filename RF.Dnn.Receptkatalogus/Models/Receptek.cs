@@ -31,6 +31,12 @@ namespace BetterBites.DnnRF.Dnn.Receptkatalogus.Models
 
         public bool vegan { get; set; }
 
+        public bool reggeli { get; set; }
+
+        public bool ebed { get; set; }
+
+        public bool vacsora { get; set; }
+
         public bool laktozmentes { get; set; }
 
     }
