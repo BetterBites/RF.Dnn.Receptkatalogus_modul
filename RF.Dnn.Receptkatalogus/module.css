@@ -1,0 +1,37 @@
+.kategoriacontainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.kategoria {
+    width: 100%;
+}
+
+.kategoriakep {
+    height: 350px;
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.katkep {
+    height: 100%;
+    width: 100%;
+    border-radius: 6px;
+}
+
+div.modulcimek {
+    text-align: center;
+}
+
+h1.modulcim {
+    font-weight: bold;
+    color: #82bf91;
+}
+
+h3.modulalcim {
+    margin-bottom: 50px;
+}

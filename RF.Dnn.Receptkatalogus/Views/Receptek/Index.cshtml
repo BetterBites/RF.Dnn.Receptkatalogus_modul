@@ -37,36 +37,55 @@
     <div id="kategoriacontainer" class="kategoriacontainer">
         <div id="rdiv" class="kategoria">
             <div class="kategoriakep">
-                <img class="katkep" src="~/Portals/0/Images/reggeli.png">
+                <a href=#>
+                    <img class="katkep" src="~/Portals/0/Images/reggeli.png">
+                </a>
             </div>
             <div class="kategorianev">
-                <h3>Reggeli</h3>
-
+                <a href=#>
+                    <h3>Reggeli</h3>
+                </a>
             </div>
         </div>
         <div id="bdiv" class="kategoria">
             <div class="kategoriakep">
-                <img class="katkep" src="~/Portals/0/Images/ebed.png">
+                <a href=#>
+                    <img class="katkep" src="~/Portals/0/Images/ebed.png">
+                </a>
             </div>
             <div class="kategorianev">
-                <h3>Ebéd</h3>
+                <a href=#>
+                    <h3>Ebéd</h3>
+                </a>
             </div>
         </div>
         <div id="vdiv" class="kategoria">
             <div class="kategoriakep">
-                <img class="katkep" src="~/Portals/0/Images/vacsora.png">
+                <a href=#>
+                    <img class="katkep" src="~/Portals/0/Images/vacsora.png">
+                </a>
             </div>
             <div class="kategorianev">
-                <h3>Vacsora</h3>
+                <a href=#>
+                    <h3>Vacsora</h3>
+                </a>
             </div>
         </div>
     </div>
+</div>
+<div id="receptlista">
+    <h2>haho</h2>
 </div>
 
 <script type="text/javascript">
     var rdiv = document.getElementById('rdiv');
     var bdiv = document.getElementById('bdiv');
     var vdiv = document.getElementById('vdiv');
+
+    var rlista = document.getElementById('receptlista');
+    if (rlista.style.display !== 'none') {
+        rlista.style.display = 'none';
+    }
 
 
     var katlista = function () {
@@ -76,6 +95,9 @@
         }
         else {
             div.style.display = 'block';
+        }
+        if (rlista.style.display == 'none') {
+            rlista.style.display = 'block';
         }
     };
 
