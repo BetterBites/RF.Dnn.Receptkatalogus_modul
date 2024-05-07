@@ -1,9 +1,10 @@
+/*Modul*/
 .kategoriacontainer {
     display: flex;
     flex-direction: row;
     justify-content: center;
     margin: 0 auto;
-    text-align: center;
+    text-align: center !important;
 }
 
 .kategoria {
@@ -18,8 +19,8 @@
 }
 
 .katkep {
-    height: 100%;
-    width: 100%;
+    height: 350px;
+    width: 350px;
     border-radius: 6px;
 }
 
@@ -34,4 +35,8 @@ h1.modulcim {
 
 h3.modulalcim {
     margin-bottom: 50px;
+}
+
+.kategorianev {
+    margin-top: 20px;
 }
