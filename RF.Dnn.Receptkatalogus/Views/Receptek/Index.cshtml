@@ -74,7 +74,7 @@
     </div>
 </div>
 <div id="receptlista">
-    <div id="reggelik" class="receptlistazas">
+    <div id="reggelik" class="receptlistazas" style="display: flex !important;">
         @foreach (var recept in Model)
         {
             if (recept.reggeli)
@@ -142,7 +142,7 @@
         }
         var etkezesdiv = document.getElementById(etkezes);
         if (etkezesdiv.style.display == 'none') {
-            etkezesdiv.style.display = 'block';
+            etkezesdiv.style.display = 'flex';
         }
     };
 
