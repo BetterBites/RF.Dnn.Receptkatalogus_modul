@@ -74,36 +74,46 @@
     </div>
 </div>
 <div id="receptlista">
-    <div id="reggelik">
+    <div id="reggelik" class="receptlistazas">
         @foreach (var recept in Model)
         {
             if (recept.reggeli)
             {
                 <div class="receptsorolas">
-                    <img src="~/Portals/0/Images/receptkepekvagott/@recept.kepnev" />
+                    <div class="receptsorolaskep">
+                        <img src="~/Portals/0/Images/receptkepekvagott/@recept.kepnev" />
+                    </div>
                     <h3>@recept.nev</h3>
                 </div>
                 
             }
         }
     </div>
-    <div id="ebedek">
+    <div id="ebedek" class="receptlistazas">
         @foreach (var recept in Model)
         {
             if (recept.ebed)
             {
-                <img src="~/Portals/0/Images/receptkepekvagott/@recept.kepnev" />
-                <h3>@recept.nev</h3>
+                <div class="receptsorolas">
+                    <div class="receptsorolaskep">
+                        <img src="~/Portals/0/Images/receptkepekvagott/@recept.kepnev" />
+                    </div>
+                    <h3>@recept.nev</h3>
+                </div>
             }
         }
     </div>
-    <div id="vacsorak">
+    <div id="vacsorak" class="receptlistazas">
         @foreach (var recept in Model)
         {
             if (recept.vacsora)
             {
-                <img src="~/Portals/0/Images/receptkepekvagott/@recept.kepnev" />
-                <h3>@recept.nev</h3>
+                <div class="receptsorolas">
+                    <div class="receptsorolaskep">
+                        <img src="~/Portals/0/Images/receptkepekvagott/@recept.kepnev" />
+                    </div>
+                    <h3>@recept.nev</h3>
+                </div>
             }
         }
     </div>
