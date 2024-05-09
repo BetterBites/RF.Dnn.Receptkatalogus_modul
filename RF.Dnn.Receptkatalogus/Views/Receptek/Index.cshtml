@@ -73,13 +73,16 @@
         </div>
     </div>
 </div>
+
+
+
 <div id="receptlista">
-    <div id="reggelik" class="receptlistazas" style="display: flex !important;">
+    <div id="reggelik" class="receptlistazas">
         @foreach (var recept in Model)
         {
             if (recept.reggeli)
             {
-                <div class="receptsorolas">
+                <div class="receptsorolas" onclick="katrecept()">
                     <div class="receptsorolaskep">
                         <a href=#>
                             <img src="~/Portals/0/Images/receptkepekvagott/@recept.kepnev" />
@@ -100,7 +103,7 @@
         {
             if (recept.ebed)
             {
-                <div class="receptsorolas">
+                <div class="receptsorolas" onclick="katrecept()">
                     <div class="receptsorolaskep">
                         <a href=#>
                             <img src="~/Portals/0/Images/receptkepekvagott/@recept.kepnev" />
@@ -120,7 +123,7 @@
         {
             if (recept.vacsora)
             {
-                <div class="receptsorolas">
+                <div class="receptsorolas" onclick="katrecept()">
                     <div class="receptsorolaskep">
                         <a href=#>
                             <img src="~/Portals/0/Images/receptkepekvagott/@recept.kepnev" />
@@ -135,6 +138,10 @@
             }
         }
     </div>
+</div>
+
+<div id="receptinfo">
+
 </div>
 
 <script type="text/javascript">
@@ -174,5 +181,14 @@
         katlista('vacsorak');
     }
 
+    var receptlista = document.getElementById('receptlista');
 
+
+    var receptinfo = document.getElementById('receptinfo');
+    receptinfo.style.display = 'none';
+
+
+    function katrecept() {
+        receptlista.style.display = 'none';
+    }
 </script>
