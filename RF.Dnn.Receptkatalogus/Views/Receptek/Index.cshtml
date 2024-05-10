@@ -82,7 +82,7 @@
         {
             if (recept.reggeli)
             {
-                <div class="receptsorolas" onclick="katrecept()">
+                <div class="receptsorolas" onclick="katrecept(@recept.receptId)">
                     <div class="receptsorolaskep">
                         <a href=#>
                             <img src="~/Portals/0/Images/receptkepekvagott/@recept.kepnev" />
@@ -94,7 +94,7 @@
                         </a>
                     </div>
                 </div>
-                
+
             }
         }
     </div>
@@ -103,7 +103,7 @@
         {
             if (recept.ebed)
             {
-                <div class="receptsorolas" onclick="katrecept()">
+                <div class="receptsorolas" onclick="katrecept(@recept.receptId)">
                     <div class="receptsorolaskep">
                         <a href=#>
                             <img src="~/Portals/0/Images/receptkepekvagott/@recept.kepnev" />
@@ -123,7 +123,7 @@
         {
             if (recept.vacsora)
             {
-                <div class="receptsorolas" onclick="katrecept()">
+                <div class="receptsorolas" onclick="katrecept(@recept.receptId)">
                     <div class="receptsorolaskep">
                         <a href=#>
                             <img src="~/Portals/0/Images/receptkepekvagott/@recept.kepnev" />
@@ -140,8 +140,26 @@
     </div>
 </div>
 
-<div id="receptinfo">
 
+<div id="receptinfo">
+    @foreach (var recept in Model)
+    {
+        if (recept.reggeli)
+        {
+            <div class="receptsorolas" onclick="katrecept(@recept.receptId)">
+                <div class="receptsorolaskep">
+                    <a href=#>
+                        <img src="~/Portals/0/Images/receptkepekvagott/@recept.kepnev" />
+                    </a>
+                </div>
+                <div class="receptsorolasnev">
+                    <a href=#>
+                        <h3>@recept.nev</h3>
+                    </a>
+                </div>
+            </div>
+        }
+    }
 </div>
 
 <script type="text/javascript">
@@ -187,8 +205,14 @@
     var receptinfo = document.getElementById('receptinfo');
     receptinfo.style.display = 'none';
 
+    var receptazonosito;
 
-    function katrecept() {
+    function katrecept(clicked) {
         receptlista.style.display = 'none';
+        receptinfo.style.display = 'block';
+        receptinfo.innerHTML = "ID = " + clicked;
+        receptazonosito = clicked;
     }
+
+
 </script>
