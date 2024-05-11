@@ -96,6 +96,7 @@ h3.modulalcim {
 }
 
 /*recept infok*/
+
 ul.receptfelsorolas li {
     list-style: none;
 }
@@ -120,7 +121,6 @@ div.receptkontenerfent {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    font-weight: bold;
 }
 
 .receptkartya {
@@ -135,10 +135,11 @@ div.receptkontenerfent {
     text-align: center;
 }
 
-    .erzekenysegkep img {
-        margin-left: auto;
-        margin-right: auto;
-    }
+.erzekenysegkep img {
+    margin-left: auto;
+    margin-right: auto;
+
+}
 
 .erzekenyseglink a {
     text-decoration: none;
@@ -149,7 +150,9 @@ div.erzekenyseglink {
 }
 
 div.erzekenysegek {
-    margin-right: 20px;
+    width: 125px;
+    text-align: center;
+    margin-right: 35px;
 }
 
 div.receptkosar {
@@ -171,7 +174,7 @@ button.cartgomb {
 }
 
 button.cartgomb:hover {
-    background-color: #4f1459;
+    background-color: #53085f;
 }
 
 img.cartikon {
@@ -203,5 +206,5 @@ div.receptleiras {
     margin: 20px 30px;
     background-color: #82bf91;
     border-radius: 4px;
-    padding: 20px 10px;
+    padding: 20px 15px;
 }
