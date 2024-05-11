@@ -155,6 +155,45 @@
 
 <div id="receptinfo">
     <div id="recept1">
+        <div class="receptkontenerfent">
+            @foreach(var recept in Model)
+            {
+                if (recept.receptId == 1)
+                {
+                    <div class="receptkartya">
+                        <h3>@recept.nev</h3>
+                        <img src="~/Portals/0/Images/receptkepekvagott/@recept.kepnev" />
+                    </div>
+                }
+            }
+            @foreach(var hozzavalo in hozzavalok)
+            {
+                if (hozzavalo.receptId == 1)
+                {
+                     <div>
+                        <ul>
+                            <li>@hozzavalo.hozzavalonev</li>
+                        </ul>
+                     </div>
+                }
+            }
+
+        </div>
+        <div class="receptkontenerlent">
+            @foreach (var recept in Model)
+            {
+                if (recept.receptId == 1)
+                {
+                    <div class="receptinfok">
+                        <p>@recept.ido</p>
+                    </div>
+                    <div class="receptleiras">
+                        <p>@recept.leiras</p>
+                    </div>
+                }
+            }
+
+        </div>
     </div>
     <div id="recept2">
         @foreach (var recept in Model)
