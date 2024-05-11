@@ -23,6 +23,8 @@ namespace BetterBites.DnnRF.Dnn.Receptkatalogus.Models
 
         public int ido { get; set; }
 
+        public int adag { get; set; }
+
         public string leiras { get; set; }
 
         public bool glutenmentes { get; set; }
