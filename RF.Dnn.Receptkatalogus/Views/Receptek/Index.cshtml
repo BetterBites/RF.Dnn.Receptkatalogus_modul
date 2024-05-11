@@ -27,7 +27,16 @@
     {
         <h2>@recept.nev</h2>
     }
+    @{
+        var products = ViewBag.hozzavalok;
+    }
+    @foreach (var product in products)
+    {
+        <p>@product.bvin</p>
+    }
 </div>*@
+
+
 
 <div id="kategorialista">
     <div class="modulcimek">
@@ -94,7 +103,6 @@
                         </a>
                     </div>
                 </div>
-
             }
         }
     </div>
@@ -262,6 +270,7 @@
             }
         }
     </div>
+
 </div>
 
 <script type="text/javascript">
@@ -277,7 +286,7 @@
     vacsorak.style.display = 'none';
 
 
-    function katlista (etkezes) {
+    function katlista(etkezes) {
         var div = document.getElementById('kategorialista');
         if (div.style.display !== 'none') {
             div.style.display = 'none';
@@ -347,4 +356,4 @@
     }
 
 
-</script>
+</script> 

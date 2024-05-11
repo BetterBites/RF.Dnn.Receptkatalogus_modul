@@ -17,24 +17,32 @@ namespace BetterBites.DnnRF.Dnn.Receptkatalogus.Controllers
     [DnnHandleError]
     public class ReceptekController: DnnController
     {
-        //[HttpPost]
-        //public void Edit(Receptek recept)
+
+        //[ModuleAction]
+        //public ActionResult Index()
         //{
-        //    var existingItem = ReceptekManager.Instance.GetItems(recept.receptId);
-        //    existingItem.receptId = item.CurrencyValue;
-        //    existingItem.CurrencyName = item.CurrencyName;
-        //    existingItem.LongCurrencyName = item.LongCurrencyName;
-        //    existingItem.IsActive = item.IsActive;
+        //    var items = ReceptekManager.Instance.GetReceptek();
+        //    return View(items);
 
-        //    ReceptekManager.Instance.UpdateItem(existingItem);
         //}
+        //[ModuleAction]
+        //public ActionResult Index()
+        //{
+        //    var hozzavalok = HotCakesManager.Instance.ReadHotCakes();
+        //    return View(hozzavalok);
 
-
+        //}
 
         [ModuleAction]
         public ActionResult Index()
         {
             var items = ReceptekManager.Instance.GetReceptek();
+            var hozzavalok = HotCakesManager.Instance.ReadHotCakes();
+
+            ViewBag.receptek = items;
+            ViewBag.hozzavalok = hozzavalok;
+
+
             return View(items);
 
         }
