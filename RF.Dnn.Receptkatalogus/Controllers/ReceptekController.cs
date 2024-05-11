@@ -37,9 +37,11 @@ namespace BetterBites.DnnRF.Dnn.Receptkatalogus.Controllers
         public ActionResult Index()
         {
             var items = ReceptekManager.Instance.GetReceptek();
-            var hozzavalok = HotCakesManager.Instance.ReadHotCakes();
+            var products = HotCakesManager.Instance.ReadHotCakes();
+            var hozzavalok = ReceptekxProductsManager.Instance.GetReceptekxProducts();
 
             ViewBag.receptek = items;
+            ViewBag.products = products;
             ViewBag.hozzavalok = hozzavalok;
 
 

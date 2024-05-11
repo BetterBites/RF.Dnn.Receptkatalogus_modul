@@ -28,7 +28,7 @@
         <h2>@recept.nev</h2>
     }
     @{
-        var products = ViewBag.hozzavalok;
+        var products = ViewBag.products;
     }
     @foreach (var product in products)
     {
@@ -36,6 +36,10 @@
     }
 </div>*@
 
+@{ 
+    var products = ViewBag.products;
+    var hozzavalok = ViewBag.hozzavalok;
+}
 
 
 <div id="kategorialista">
@@ -151,24 +155,6 @@
 
 <div id="receptinfo">
     <div id="recept1">
-        @foreach (var recept in Model)
-        {
-            if (recept.receptId == 1)
-            {
-                <div>
-                    <div>
-                        <a href=#>
-                            <img src="~/Portals/0/Images/receptkepekvagott/@recept.kepnev" />
-                        </a>
-                    </div>
-                    <div>
-                        <a href=#>
-                            <h3>@recept.nev</h3>
-                        </a>
-                    </div>
-                </div>
-            }
-        }
     </div>
     <div id="recept2">
         @foreach (var recept in Model)
