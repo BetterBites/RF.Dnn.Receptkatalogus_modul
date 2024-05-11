@@ -97,6 +97,7 @@ h3.modulalcim {
 
 /*recept infok*/
 
+
 ul.receptfelsorolas li {
     list-style: none;
 }
@@ -121,6 +122,7 @@ div.receptkontenerfent {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+    font-weight: bold;
 }
 
 .receptkartya {
@@ -135,11 +137,15 @@ div.receptkontenerfent {
     text-align: center;
 }
 
-.erzekenysegkep img {
-    margin-left: auto;
-    margin-right: auto;
+    .erzekenysegkep img {
+        margin-left: auto;
+        margin-right: auto;
+    }
 
-}
+    .erzekenysegkep a {
+        margin-left: auto;
+        margin-right: auto;
+    }
 
 .erzekenyseglink a {
     text-decoration: none;
@@ -155,8 +161,17 @@ div.erzekenysegek {
     margin-right: 35px;
 }
 
+    div.erzekenysegek p a {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
 div.receptkosar {
     padding: 20px 20px;
+}
+
+div.idosesadag {
+    display: flex !important;
 }
 
 /*vásárlás gomb*/
@@ -171,31 +186,36 @@ button.cartgomb {
     text-shadow: none;
     border: none;
     transition: all 0.125s cubic-bezier(0.15, 0.15, 0.35, 1) 0s;
-    display:flex;
+    display: flex;
 }
 
-button.cartgomb:hover {
-    background-color: #53085f;
-}
+    button.cartgomb:hover {
+        background-color: #53085f;
+    }
+
+    button.cartgomb p {
+        margin-bottom: 0px;
+    }
 
 img.cartikon {
-    width: 25px;
+    width: 25px !important;
     margin-right: 5px;
 }
 
 img.timer {
-    width: 25px;
+    width: 25px !important;
     margin-right: 5px;
 }
 
 img.dish {
-    width: 25px;
+    width: 25px !important;
     margin-right: 5px;
     margin-left: 15px;
 }
 
 p.rendelj {
     font-weight: bold;
+    margin-top: 10px;
 }
 
 .hozzavalocim {
@@ -208,10 +228,30 @@ p.rendelj {
     margin-left: 0px;
 }
 
-
 div.receptleiras {
     margin: 20px 30px;
     background-color: #82bf91;
     border-radius: 4px;
     padding: 20px 15px;
 }
+
+div.idoesadag {
+    display: flex !important;
+}
+
+
+    div.idoesadag p {
+        margin-right: 5px;
+    }
+
+div.idoesadag {
+    width: 25px;
+    height: 25px;
+}
+
+
+
+
+
+
+
