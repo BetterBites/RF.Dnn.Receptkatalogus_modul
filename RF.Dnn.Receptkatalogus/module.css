@@ -171,6 +171,7 @@ button.cartgomb {
     text-shadow: none;
     border: none;
     transition: all 0.125s cubic-bezier(0.15, 0.15, 0.35, 1) 0s;
+    display:flex;
 }
 
 button.cartgomb:hover {
@@ -200,7 +201,13 @@ p.rendelj {
 .hozzavalocim {
     margin-top: 20px;
     margin-bottom: 10px;
+    margin-left: 0px;
 }
+
+.receptleiras h3 {
+    margin-left: 0px;
+}
+
 
 div.receptleiras {
     margin: 20px 30px;
