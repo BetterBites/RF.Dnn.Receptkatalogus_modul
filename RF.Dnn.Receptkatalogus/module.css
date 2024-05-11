@@ -94,3 +94,8 @@ h3.modulalcim {
     margin-left: auto;
     margin-right: auto;
 }
+
+/*recept infok*/
+ul.receptfelsorolas li{
+    list-style:none;
+}

@@ -166,28 +166,83 @@
                     </div>
                 }
             }
-            @foreach(var hozzavalo in hozzavalok)
-            {
-                if (hozzavalo.receptId == 1)
-                {
-                     <div>
-                        <ul>
-                            <li>@hozzavalo.mennyi @hozzavalo.mennyiseg @hozzavalo.hozzavalonev</li>
-                        </ul>
-                     </div>
-                }
-            }
-
+            <div class="receptkosar">
+                <div>
+                    <div class="receptinfok">
+                        @foreach(var recept in Model)
+                        {
+                            if (recept.receptId == 1)
+                            {
+                                <div>
+                                    <div class="erzekenyseglink">
+                                        @if (recept.cukormentes)
+                                        {
+                                            <div class="erzekenysegek">
+                                                <div class="erzekenysegkep">
+                                                    <a  href="/Termekleiras/Cukormentesen-az-elet"><img src="~/Portals/0/Images/erzekenysegek/sugar.png" /></a>
+                                                </div>
+                                                <p><a href="/Termekleiras/Cukormentesen-az-elet">CUKORMENTES</a></p>
+                                            </div>
+                                        }
+                                        @if (recept.glutenmentes)
+                                        {
+                                            <div>
+                                                <div class="erzekenysegkep">
+                                                    <a  href="/Termekleiras/Glutenmentesen-az-elet"><img src="~/Portals/0/Images/erzekenysegek/gluten.png" /></a>
+                                                </div>
+                                                <p><a href="/Termekleiras/Glutenmentesen-az-elet">GLUTÉNMENTES</a></p>
+                                            </div>
+                                        }
+                                        @if (recept.laktozmentes)
+                                        {
+                                            <div>
+                                                <div class="erzekenysegkep">
+                                                    <a href="/Termekleiras/Laktozmentesen-az-elet"><img src="~/Portals/0/Images/erzekenysegek/lactose-free.png" /></a>
+                                                </div>
+                                                <p><a href="/Termekleiras/Laktozmentesen-az-elet">LAKTÓZMENTES</a></p>
+                                            </div>
+                                        }
+                                        @if (recept.vegan)
+                                        {
+                                            <div>
+                                                <div class="erzekenysegkep">
+                                                    <a href="/Termekleiras/Vegankent-az-elet"><img src="~/Portals/0/Images/erzekenysegek/vegan.png" /></a>
+                                                </div>
+                                                <p><a href="/Termekleiras/Vegankent-az-elet">VEGÁN</a></p>
+                                            </div>
+                                        }
+                                    </div>
+                                    <p>
+                                        <img class="timer" src="~/Portals/0/Images/erzekenysegek/timer.png"/>Elkészítési idő: @recept.ido perc
+                                    </p>
+                                </div>
+                            }
+                        }
+                    </div>
+                    <p class="rendelj">Rendeld meg az összes hozzávalót azonnal a receptből</p>
+                    <button class="cartgomb"><img class="cartikon" src="~/Portals/0/Images/erzekenysegek/cart.png"/> Alapanyagok beszerzése</button>
+                    <h3 class="hozzavalocim">Hozzávalók</h3>
+                </div>
+                <div>
+                    <ul class="receptfelsorolas">
+                        @foreach (var hozzavalo in hozzavalok)
+                        {
+                            if (hozzavalo.receptId == 1)
+                            {
+                                <li>@hozzavalo.mennyi @hozzavalo.mennyiseg @hozzavalo.hozzavalonev</li>
+                            }
+                        }
+                    </ul>
+                </div>
+            </div>
         </div>
         <div class="receptkontenerlent">
             @foreach (var recept in Model)
             {
                 if (recept.receptId == 1)
                 {
-                    <div class="receptinfok">
-                        <p>@recept.ido</p>
-                    </div>
                     <div class="receptleiras">
+                        <h3>Elkészítés</h3>
                         <p>@recept.leiras</p>
                     </div>
                 }
