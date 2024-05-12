@@ -156,7 +156,7 @@
 <div id="receptinfo">
     <div id="recept1">
         <div class="receptkontenerfent">
-            @foreach(var recept in Model)
+            @foreach (var recept in Model)
             {
                 if (recept.receptId == 1)
                 {
@@ -169,7 +169,7 @@
             <div class="receptkosar">
                 <div>
                     <div class="receptinfok">
-                        @foreach(var recept in Model)
+                        @foreach (var recept in Model)
                         {
                             if (recept.receptId == 1)
                             {
@@ -225,7 +225,7 @@
                         }
                     </div>
                     <p class="rendelj">Rendeld meg az összes hozzávalót azonnal a receptből</p>
-                    <button class="cartgomb"><div class="cartikondiv"><img class="cartikon" src="~/Portals/0/Images/erzekenysegek/cart.png" /></div> <p>Alapanyagok beszerzése</p></button>
+                    <button class="cartgomb" onclick="katkosar(1)"><div class="cartikondiv"><img class="cartikon" src="~/Portals/0/Images/erzekenysegek/cart.png" /></div> <p>Alapanyagok beszerzése</p></button>
                     <h3 class="hozzavalocim">Hozzávalók</h3>
                 </div>
                 <div>
@@ -326,7 +326,7 @@
                         }
                     </div>
                     <p class="rendelj">Rendeld meg az összes hozzávalót azonnal a receptből</p>
-                    <button class="cartgomb"><div class="cartikondiv"><img class="cartikon" src="~/Portals/0/Images/erzekenysegek/cart.png" /></div> <p>Alapanyagok beszerzése</p></button>
+                    <button class="cartgomb" onclick="katkosar(2)"><div class="cartikondiv"><img class="cartikon" src="~/Portals/0/Images/erzekenysegek/cart.png" /></div> <p>Alapanyagok beszerzése</p></button>
                     <h3 class="hozzavalocim">Hozzávalók</h3>
                 </div>
                 <div>
@@ -427,7 +427,7 @@
                         }
                     </div>
                     <p class="rendelj">Rendeld meg az összes hozzávalót azonnal a receptből</p>
-                    <button class="cartgomb"><div class="cartikondiv"><img class="cartikon" src="~/Portals/0/Images/erzekenysegek/cart.png" /></div> <p>Alapanyagok beszerzése</p></button>
+                    <button class="cartgomb" onclick="katkosar(3)"><div class="cartikondiv"><img class="cartikon" src="~/Portals/0/Images/erzekenysegek/cart.png" /></div> <p>Alapanyagok beszerzése</p></button>
                     <h3 class="hozzavalocim">Hozzávalók</h3>
                 </div>
                 <div>
@@ -528,7 +528,7 @@
                         }
                     </div>
                     <p class="rendelj">Rendeld meg az összes hozzávalót azonnal a receptből</p>
-                    <button class="cartgomb"><div class="cartikondiv"><img class="cartikon" src="~/Portals/0/Images/erzekenysegek/cart.png" /></div> <p>Alapanyagok beszerzése</p></button>
+                    <button class="cartgomb" onclick="katkosar(4)"><div class="cartikondiv"><img class="cartikon" src="~/Portals/0/Images/erzekenysegek/cart.png" /></div> <p>Alapanyagok beszerzése</p></button>
                     <h3 class="hozzavalocim">Hozzávalók</h3>
                 </div>
                 <div>
@@ -629,7 +629,7 @@
                         }
                     </div>
                     <p class="rendelj">Rendeld meg az összes hozzávalót azonnal a receptből</p>
-                    <button class="cartgomb"><div class="cartikondiv"><img class="cartikon" src="~/Portals/0/Images/erzekenysegek/cart.png" /></div> <p>Alapanyagok beszerzése</p></button>
+                    <button class="cartgomb" onclick="katkosar(5)"><div class="cartikondiv"><img class="cartikon" src="~/Portals/0/Images/erzekenysegek/cart.png" /></div> <p>Alapanyagok beszerzése</p></button>
                     <h3 class="hozzavalocim">Hozzávalók</h3>
                 </div>
                 <div>
@@ -730,7 +730,7 @@
                         }
                     </div>
                     <p class="rendelj">Rendeld meg az összes hozzávalót azonnal a receptből</p>
-                    <button class="cartgomb"><div class="cartikondiv"><img class="cartikon" src="~/Portals/0/Images/erzekenysegek/cart.png" /></div> <p>Alapanyagok beszerzése</p></button>
+                    <button class="cartgomb" onclick="katkosar(6)"><div class="cartikondiv"><img class="cartikon" src="~/Portals/0/Images/erzekenysegek/cart.png" /></div> <p>Alapanyagok beszerzése</p></button>
                     <h3 class="hozzavalocim">Hozzávalók</h3>
                 </div>
                 <div>
@@ -845,5 +845,32 @@
         }
     }
 
+    function katkosar(receptid) {
+        var kosarlink = '/Rendelesem/Kosar';
+        if (receptid == 1) {
+            kosarlink ='/Rendelesem/Kosar/AddSku/00000004/AddSkuQty/1/AddSku/00000416/AddSkuQty/1/AddSku/00000252/AddSkuQty/1/AddSku/00000006/AddSkuQty/1/AddSku/0111111/AddSkuQty/1/AddSku/00000142/AddSkuQty/1/AddSku/00000005/AddSkuQty/1/AddSku/0111113/AddSkuQty/1/AddSku/0111112/AddSkuQty/1/AddSku/0111114/AddSkuQty/1'
+            window.open(kosarlink)
+        }
+        if (receptid == 2) {
+            kosarlink = '/Rendelesem/Kosar/AddSku/00000124/AddSkuQty/1/AddSku/00000148/AddSkuQty/1/AddSku/00000180/AddSkuQty/1/AddSku/00000183/AddSkuQty/1/AddSku/00000260/AddSkuQty/1'
+            window.open(kosarlink)
+        }
+        if (receptid == 3) {
+            kosarlink = '/Rendelesem/Kosar/AddSku/00000601/AddSkuQty/1/AddSku/00000267/AddSkuQty/1/AddSku/00000439/AddSkuQty/1/AddSku/00001220/AddSkuQty/1/AddSku/00000004/AddSkuQty/1'
+            window.open(kosarlink)
+        }
+        if (receptid == 4) {
+            kosarlink = '/Rendelesem/Kosar/AddSku/00002500/AddSkuQty/1/AddSku/00000262/AddSkuQty/1/AddSku/00000440/AddSkuQty/1/AddSku/00000321/AddSkuQty/1/AddSku/00000142/AddSkuQty/1'
+            window.open(kosarlink)
+        }
+        if (receptid == 5) {
+            kosarlink = '/Rendelesem/Kosar/AddSku/00000005/AddSkuQty/1/AddSku/00000142/AddSkuQty/1/AddSku/0111113/AddSkuQty/1/AddSku/00000252/AddSkuQty/1/AddSku/0111111/AddSkuQty/1/AddSku/00000004/AddSkuQty/1/AddSku/0111114/AddSkuQty/1'
+            window.open(kosarlink)
+        }
+        if (receptid == 6) {
+            kosarlink = '/Rendelesem/Kosar/AddSku/00002501/AddSkuQty/1/AddSku/00000994/AddSkuQty/1/AddSku/00001030/AddSkuQty/1/AddSku/00000017/AddSkuQty/1'
+            window.open(kosarlink)
+        }
+    }
 
 </script> 
